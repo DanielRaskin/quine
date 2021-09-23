@@ -1,6 +1,5 @@
 def quine_print(s):
-    print(s + "s = \"" + s.replace("\\", "\\\\").replace("\n", "\\n").replace("\"", "\\\"") + "\"\nquine_print(s)")
+    print(s + "quine_print(\"" + s.replace("\\", "\\\\").replace("\n", "\\n").replace("\"", "\\\"") + "\")")
 
 
-s = "def quine_print(s):\n    print(s + \"s = \\\"\" + s.replace(\"\\\\\", \"\\\\\\\\\").replace(\"\\n\", \"\\\\n\").replace(\"\\\"\", \"\\\\\\\"\") + \"\\\"\\nquine_print(s)\")\n\n\n"
-quine_print(s)
+quine_print("def quine_print(s):\n    print(s + \"quine_print(\\\"\" + s.replace(\"\\\\\", \"\\\\\\\\\").replace(\"\\n\", \"\\\\n\").replace(\"\\\"\", \"\\\\\\\"\") + \"\\\")\")\n\n\n")
